@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+    <ListView
+        android:id="@+id/musicList"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <Button
+                android:id="@+id/last"
+                android:background="@mipmap/last"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <Button
+                android:id="@+id/stop"
+                android:background="@mipmap/stop"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <Button
+                android:id="@+id/start"
+                android:background="@mipmap/start"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <Button
+                android:id="@+id/pause"
+                android:background="@mipmap/pause"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <Button
+                android:id="@+id/next"
+                android:background="@mipmap/next"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            </Button>
+        </LinearLayout>
+
+
+
+        <!--<Button-->
+            <!--android:id="@+id/stop"-->
+            <!--android:background="@mipmap/stop"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1">-->
+        <!--</Button>-->
+
+        <!--<Button  android:id="@+id/start"-->
+            <!--android:background="@mipmap/start"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1">-->
+        <!--</Button>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/pause"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:background="@mipmap/pause"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1">-->
+        <!--</Button>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/next"-->
+            <!--android:background="@mipmap/next"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1">-->
+        <!--</Button>-->
+    </LinearLayout>
+</LinearLayout>
