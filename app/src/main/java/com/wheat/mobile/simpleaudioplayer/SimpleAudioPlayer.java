@@ -22,7 +22,6 @@ public class SimpleAudioPlayer extends Activity
     private MediaPlayer myMediaPlayer;
     private List<String> myMusicList=new ArrayList<String>();
     private int currentListItem=0;
-    //“Ù¿÷µƒ¬∑æ∂
     private static final String MUSIC_PATH=new String("/sdcard/");
 
     private ListView musicList;
@@ -48,7 +47,7 @@ public class SimpleAudioPlayer extends Activity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 currentListItem=position;
-
+                playMusic(MUSIC_PATH+myMusicList.get(currentListItem));
             }
         });
 
@@ -64,7 +63,21 @@ public class SimpleAudioPlayer extends Activity
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playMusic(MUSIC_PATH+myMusicList.get(currentListItem));
+            }
+        });
 
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nextMusic();
+            }
+        });
+
+        last.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lastMusic();
             }
         });
     }
@@ -115,6 +128,12 @@ public class SimpleAudioPlayer extends Activity
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode==KeyEvent.KEYCODE_BACK){
+            myMediaPlayer.stop();
+            myMediaPlayer.release();
+            this.finish();
+            return true;
+        }
         return super.onKeyDown(keyCode, event);
     }
 }
