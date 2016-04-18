@@ -47,7 +47,9 @@ public class SimpleAudioPlayer extends Activity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 currentListItem=position;
-                playMusic(MUSIC_PATH+myMusicList.get(currentListItem));
+                if(myMusicList.size()>0) {
+                    playMusic(MUSIC_PATH + myMusicList.get(currentListItem));
+                }
             }
         });
 
@@ -63,7 +65,9 @@ public class SimpleAudioPlayer extends Activity
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                playMusic(MUSIC_PATH+myMusicList.get(currentListItem));
+                if(myMusicList.size()>0) {
+                    playMusic(MUSIC_PATH + myMusicList.get(currentListItem));
+                }
             }
         });
 
@@ -84,7 +88,7 @@ public class SimpleAudioPlayer extends Activity
 
     private void musicList(){
         File home=new File(MUSIC_PATH);
-        if(home.listFiles(new MusicFilter()).length>0){
+        if(home.listFiles(new MusicFilter())!=null&&home.listFiles(new MusicFilter()).length>0){
             for(File file:home.listFiles(new MusicFilter())){
                 myMusicList.add(file.getName());
             }
@@ -115,7 +119,9 @@ public class SimpleAudioPlayer extends Activity
         if(++currentListItem>=myMusicList.size()){
             currentListItem=0;
         }else{
-            playMusic(MUSIC_PATH+myMusicList.get(currentListItem));
+            if(myMusicList.size()>0) {
+                playMusic(MUSIC_PATH + myMusicList.get(currentListItem));
+            }
         }
     }
 
@@ -123,7 +129,9 @@ public class SimpleAudioPlayer extends Activity
         if(--currentListItem<0){
             currentListItem=myMusicList.size()-1;
         }
-        playMusic(MUSIC_PATH+myMusicList.get(currentListItem));
+        if(myMusicList.size()>0) {
+            playMusic(MUSIC_PATH + myMusicList.get(currentListItem));
+        }
     }
 
     @Override
